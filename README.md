@@ -6,6 +6,7 @@
 >
 
 Este tutorial es hecho en colaboración de [drzioner](https://github.com/drzioner)
+
 Se ha modificado un poco el tutorial de [Scaffold ETH](https://github.com/scaffold-eth/se-2-challenges/tree/challenge-0-simple-nft)
 para que funcione con la red de **Metis**, mas exactamente **Metis Sepolia**.
 
