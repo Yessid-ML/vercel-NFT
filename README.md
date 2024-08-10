@@ -5,16 +5,17 @@
 > español.
 >
 
-He modificado un poco el tutorial de [Scaffold ETH](https://github.com/scaffold-eth/se-2-challenges/tree/challenge-0-simple-nft)
+Este tutorial es hecho en colaboración de [drzioner](https://github.com/drzioner)
+Se ha modificado un poco el tutorial de [Scaffold ETH](https://github.com/scaffold-eth/se-2-challenges/tree/challenge-0-simple-nft)
 para que funcione con la red de **Metis**, mas exactamente **Metis Sepolia**.
 
-Este esta mas simplificado y solo se enfoca en la creación de un contrato NFT básico.
-Con lo cual solo debes preocuparte por ejecutar los comandos y seguir los pasos, para que puedas crear tu propio 
-contrato NFT en la red de Metis, sin problemas.
+Solo nos enfocaremos en la creación de un contrato NFT básico.
+Unicamente hay que seguir los comandos para poder crear nuestro propio contrato NFT con la red de Metis.
 
 > [!NOTE]
 > Puedes seguir el tutorial original de
-> [Scaffold ETH](https://github.com/scaffold-eth/se-2-challenges/tree/challenge-0-simple-nft) o la version en español
+> [Scaffold ETH](https://github.com/scaffold-eth/se-2-challenges/tree/challenge-0-simple-nft) version en ingles
+> [drzioner](https://github.com/drzioner/simple-nft-spanish/tree/main) version en español
 > [🚩 Challenge #0: 🎟 Simple NFT Example](docs/challenge-0-simple-nft.md) para crear un contrato NFT en la red de prueba 
 > de Ethereum.
 >
@@ -23,36 +24,35 @@ contrato NFT en la red de Metis, sin problemas.
 
 **Paso 1**
 
-Clona el repositorio de [Simple NFT Spanish](https://github.com/drzioner/simple-nft-spanish) en tu maquina local.
+Clona el repositorio de [simple vercel NFT](https://github.com/Yessid-ML/vercel-NFT.git) en tu maquina local.
 ```bash
-    git clone https://github.com/drzioner/simple-nft-spanish.git
+    git clone https://github.com/Yessid-ML/vercel-NFT.git
 ```
 OR 
 ```bash
-    git clone https://github.com/drzioner/simple-nft-spanish.git el-nombre-que-quieras
+    git clone https://github.com/Yessid-ML/vercel-NFT.git el-nombre-que-quieras
 ```
 Luego debes dirigirte a la carpeta del proyecto.
 ```bash
-    cd simple-nft-spanish
+    cd vercel-nft
 ```
 
 **Paso 2**
 
 > [!NOTE]
 > Antes de comenzar, asegúrate de tener instalado [Node.js](https://nodejs.org/es/) y [Yarn](https://yarnpkg.com/). 
-> es muy importante que tu version de Node.js sea igual o mayor de 18.17.0 o inferior a la version 21, esto no se 
-> comenta en el tutorial original, pero es importante tenerlo en cuenta.
+> es muy importante que tu version de Node.js sea igual o mayor de 18.17.0 o inferior a la version 21.
 > 
 
-Instala las dependencias del proyecto, he agragado un archivo `.nvmrc` para que al subirlo a **Vercel** no tengas 
-   problemas ocn  la version de **Node.js**.
+Instala las dependencias del proyecto, se ha agragado un archivo `.nvmrc` para que al subirlo a **Vercel** no tengas 
+   problemas con la version de **Node.js**.
 ```bash
     yarn install
 ```
 
 **Paso 3**
 
-Luego debes ejecutar la cadena de prueba de **Hardhat** en local, esto nos ayuda a validar que todo esta 
+Luego es necesario ejecutar la cadena de prueba de **Hardhat** en local, esto nos ayuda a validar que todo esta 
    funcionan bien.
 ```bash
     yarn chain
@@ -136,7 +136,7 @@ Any funds sent to them on Mainnet or any other live network WILL BE LOST.
 > [Metamask Hardhat](docs/metamask-hardhat.md)
 >
 
-Ahora debes desplegar el contrato en la red de **Hardhat**. Esto debes hacerlo en una nueva terminal.
+Ahora debes desplegar el contrato en la red de **Hardhat**. Para hacer esto es necesario una nueva terminal.
 ```bash
     yarn deploy --network localhost
 ```
@@ -145,7 +145,7 @@ Deberias ver algo como esto:
 Generating typings for: 18 artifacts in dir: typechain-types for target: ethers-v6
 Successfully generated 48 typings!
 Compiled 20 Solidity files successfully (evm target: london).
-deploying "YourCollectible" (tx: 0x364d576dca178e40400c27745a166360778ada56ce81fbe0b1a9924293fa7210)...: deployed at 0x5FbDB2315678afecb367f032d93F642f64180aa3 with 1758855 gas
+deploying "YourCollectible" (tx: 0xf4e4591a6d25190e61e2c8bc5ab981a8103dac27382590807eed0de04c5580d7)...: deployed at 0x5FbDB2315678afecb367f032d93F642f64180aa3 with 1758831 gas
 📝 Updated TypeScript contract definition file on ../nextjs/contracts/deployedContracts.ts
 ```
 
@@ -205,7 +205,7 @@ Ahora deberias ver algo como esto:
 **Paso 5**
 
 Ahora debemos generar una nueva cuenta en **Metamask** para poder interactuar con la red de **Metis Sepolia**. Es 
-   una buena practica hacer esto ahora vamos a ejecutar el siguiente comando:
+   una buena practica hacer esto ahora vamos a ejecutar el siguiente comando en una nueva terminal:
 ```bash
     yarn generate
 ```
@@ -217,7 +217,7 @@ Deberias ver algo como esto:
 ```
 ahora dirijete a este directorio `packages/hardhat` deberias encontrar un nuevo archivo `.env` con tu clave privada.
 ```dotenv
-    DEPLOYER_PRIVATE_KEY=0x66cebd6204dc45923a2f30a75b32872d2i76123756127561257612837512875
+    DEPLOYER_PRIVATE_KEY=0x57b747d4b340ac21e0687c6e835d5eae56146da8a9c9ed58e18705eb16798d31
 ```
 Esa clave privada es la que debes agregar a tu **Metamask** para poder interactuar con la red de **Metis Sepolia**.
 
